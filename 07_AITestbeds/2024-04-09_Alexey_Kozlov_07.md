@@ -17,11 +17,12 @@ Below are the links to the log files:
 
 The MNIST example was run 4 times with the following values of learning rate: 0.0005, 0.005, 0.05 (original case), and 0.5. The accuracy on the test set is shown below:
 
-learning rate	accuracy on test set	comments
-0.0005			93.08%					learning rate is too small, needs more epochs to get a good accuracy
-0.005			98.44%					good
-0.05			98.58%					original case, good
-0.5				9.58%					learning rate is too large, the solution may be overfitted or unstable/diverge 
+| learning rate | accuracy on test set | comments |
+| ------------- | -------------------- | -------- |
+| 0.0005        | 93.08%               | learning rate is too small, needs more epochs to get a good accuracy   |
+| 0.005         | 98.44%               | good                                                                   |
+| 0.05          | 98.58%               | original case, good                                                    |
+| 0.5           | 9.58%                | learning rate is too large, the solution may be overfitted or unstable |
 
 * [Log file](https://github.com/akozlov0/ai-science-training-series/blob/main/07_AITestbeds/Graphcore.txt)
 
@@ -31,10 +32,11 @@ learning rate	accuracy on test set	comments
 
 The BERT example was run 3 times with the batch sizes 512, 1024, and 2048. The run time increases with the batch size increasing as shown below:
 
-batch size		run time, s
-512				176
-1024			211
-2048			305
+| batch size | run time, s |
+| ---------- | ----------- |
+| 512	     | 176         |
+| 1024       | 211         |
+| 2048       | 305         |
 
 * [Log file](https://github.com/akozlov0/ai-science-training-series/blob/main/07_AITestbeds/Cerebras.txt)
 
