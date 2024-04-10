@@ -1,0 +1,429 @@
+Keyboard-interactive authentication prompts from server:
+| Password:
+End of keyboard-interactive prompts from server
+    +----------------------------------------------------------------------+
+    ¦                 • MobaXterm Personal Edition v23.6 •                 ¦
+    ¦               (SSH client, X server and network tools)               ¦
+    ¦                                                                      ¦
+    ¦ ? SSH session to akozlov@gc-login-01.ai.alcf.anl.gov                 ¦
+    ¦   • Direct SSH      :  ?                                             ¦
+    ¦   • SSH compression :  ?                                             ¦
+    ¦   • SSH-browser     :  ?                                             ¦
+    ¦   • X11-forwarding  :  ?  (remote display is forwarded through SSH)  ¦
+    ¦                                                                      ¦
+    ¦ ? For more info, ctrl+click on help or visit our website.            ¦
+    +----------------------------------------------------------------------+
+
+
+---------------------------------------------------------------------------
+                            Notice to Users
+
+This is a Federal computer system and is the property of the United States
+Government. It is for authorized use only. Users (authorized or unauthorized)
+have no explicit or implicit expectation of privacy.
+
+Any or all uses of this system and all files on this system may be intercepted,
+monitored, recorded, copied, audited, inspected, and disclosed to authorized
+site, Department of Energy, and law enforcement personnel, as well as
+authorized officials of other agencies, both domestic and foreign. By using
+this system, the user consents to such interception, monitoring, recording,
+copying, auditing, inspection, and disclosure at the discretion of authorized
+site or Department of Energy personnel.
+
+Unauthorized or improper use of this system may result in administrative
+disciplinary action and civil and criminal penalties. By continuing to use
+this system you indicate your awareness of and consent to these terms and
+conditions of use. LOG OFF IMMEDIATELY if you do not agree to the conditions
+stated in this warning.
+
+----------------------------------------------------------------------------
+
+
+(base) akozlov@gc-login-01:~$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+             20681       p64  python3 kylekaba PD       0:00      1 (BadConstraints)
+             20671       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20670       p64  python3   memani PD       0:00      1 (BadConstraints)
+             20663       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20662       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20654       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20653       p64   python ahurtado PD       0:00      1 (BadConstraints)
+             20652       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20647       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20641       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20638       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20637       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20636       p64   python  akozlov PD       0:00      1 (BadConstraints)
+             20635       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20634       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20630       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+(base) akozlov@gc-login-01:~$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+             20681       p64  python3 kylekaba PD       0:00      1 (BadConstraints)
+             20671       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20670       p64  python3   memani PD       0:00      1 (BadConstraints)
+             20663       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20662       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20654       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20653       p64   python ahurtado PD       0:00      1 (BadConstraints)
+             20652       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20647       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20641       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20638       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20637       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20635       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20634       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+             20630       p64 Graphcor  arnoldw PD       0:00      1 (BadConstraints)
+(base) akozlov@gc-login-01:~$ ssh gc-poplar-03.ai.alcf.anl.gov
+
+---------------------------------------------------------------------------
+                            Notice to Users
+
+This is a Federal computer system and is the property of the United States
+Government. It is for authorized use only. Users (authorized or unauthorized)
+have no explicit or implicit expectation of privacy.
+
+Any or all uses of this system and all files on this system may be intercepted,
+monitored, recorded, copied, audited, inspected, and disclosed to authorized
+site, Department of Energy, and law enforcement personnel, as well as
+authorized officials of other agencies, both domestic and foreign. By using
+this system, the user consents to such interception, monitoring, recording,
+copying, auditing, inspection, and disclosure at the discretion of authorized
+site or Department of Energy personnel.
+
+Unauthorized or improper use of this system may result in administrative
+disciplinary action and civil and criminal penalties. By continuing to use
+this system you indicate your awareness of and consent to these terms and
+conditions of use. LOG OFF IMMEDIATELY if you do not agree to the conditions
+stated in this warning.
+
+----------------------------------------------------------------------------
+
+
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.4.0-172-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+  System information as of Mon 08 Apr 2024 10:42:11 AM UTC
+
+  System load:              1.51
+  Usage of /:               29.7% of 97.87GB
+  Memory usage:             2%
+  Swap usage:               0%
+  Processes:                2484
+  Users logged in:          3
+  IPv4 address for docker0: 10.240.0.1
+  IPv4 address for eno1:    10.1.3.103
+  IPv4 address for ens2f0:  140.221.77.13
+  IPv4 address for ens2f1:  10.1.5.103
+  IPv4 address for idrac:   169.254.1.2
+  IPv6 address for idrac:   fde1:53ba:e9a0:de11:b964:714e:4969:16c3
+  IPv6 address for idrac:   fde1:53ba:e9a0:de11:e03d:6437:d64:3c95
+  IPv6 address for idrac:   fde1:53ba:e9a0:de11:bc05:ae55:ef07:a3d7
+  IPv6 address for idrac:   fde1:53ba:e9a0:de11:6dfe:a9bb:d572:4522
+  IPv6 address for idrac:   fde1:53ba:e9a0:de11:c5a0:dde7:914a:9363
+  IPv6 address for idrac:   fde1:53ba:e9a0:de11:6dc6:1b26:c0b7:9dc9
+  IPv6 address for idrac:   fde1:53ba:e9a0:de11:59dc:9fb9:a81a:deab
+  IPv6 address for idrac:   fde1:53ba:e9a0:de11:ce48:3aff:fe1c:dd49
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+12 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+20 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+New release '22.04.3 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+*** System restart required ***
+-----------------------------------------------------------------------------
+
+                           Notice to Users
+
+This is a Federal computer system and is the property of the United States
+Government. It is for authorized use only. Users (authorized or unauthorized)
+have no explicit or implicit expectation of privacy.
+
+Any or all uses of this system and all files on this system may be intercepted,
+monitored, recorded, copied, audited, inspected, and disclosed to authorized
+site, Department of Energy, and law enforcement personnel, as well as
+authorized officials of other agencies, both domestic and foreign. By using
+this system, the user consents to such interception, monitoring, recording,
+copying, auditing, inspection, and disclosure at the discretion of authorized
+site or Department of Energy personnel.
+
+Unauthorized or improper use of this system may result in administrative
+disciplinary action and civil and criminal penalties. By continuing to use
+this system you indicate your awareness of and consent to these terms and
+conditions of use. LOG OFF IMMEDIATELY if you do not agree to the conditions
+stated in this warning.
+
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+
+                           Notice to Users
+
+This is a Federal computer system and is the property of the United States
+Government. It is for authorized use only. Users (authorized or unauthorized)
+have no explicit or implicit expectation of privacy.
+
+Any or all uses of this system and all files on this system may be intercepted,
+monitored, recorded, copied, audited, inspected, and disclosed to authorized
+site, Department of Energy, and law enforcement personnel, as well as
+authorized officials of other agencies, both domestic and foreign. By using
+this system, the user consents to such interception, monitoring, recording,
+copying, auditing, inspection, and disclosure at the discretion of authorized
+site or Department of Energy personnel.
+
+Unauthorized or improper use of this system may result in administrative
+disciplinary action and civil and criminal penalties. By continuing to use
+this system you indicate your awareness of and consent to these terms and
+conditions of use. LOG OFF IMMEDIATELY if you do not agree to the conditions
+stated in this warning.
+
+-----------------------------------------------------------------------------
+
+(base) akozlov@gc-poplar-03:~$ mkdir -p ~/venvs/graphcore
+(base) akozlov@gc-poplar-03:~$ virtualenv ~/venvs/graphcore/poptorch33_env
+created virtual environment CPython3.8.10.final.0-64 in 596ms
+  creator CPython3Posix(dest=/home/akozlov/venvs/graphcore/poptorch33_env, clear=False, global=False)
+  seeder FromAppData(download=False, pip=latest, setuptools=latest, wheel=latest, pkg_resources=latest, via=copy, app_data_dir=/home/akozlov/.local/share/virtualenv/seed-app-data/v1.0.1.debian.1)
+  activators BashActivator,CShellActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator
+(base) akozlov@gc-poplar-03:~$ source ~/venvs/graphcore/poptorch33_env/bin/activate
+(poptorch33_env) (base) akozlov@gc-poplar-03:~$
+(poptorch33_env) (base) akozlov@gc-poplar-03:~$ POPLAR_SDK_ROOT=/software/graphcore/poplar_sdk/3.3.0
+(poptorch33_env) (base) akozlov@gc-poplar-03:~$ export POPLAR_SDK_ROOT=$POPLAR_SDK_ROOT
+(poptorch33_env) (base) akozlov@gc-poplar-03:~$ pip install $POPLAR_SDK_ROOT/poptorch-3.3.0+113432_960e9c294b_ubuntu_20_04-cp38-cp38-linux_x86_64.whl
+Processing /software/graphcore/poplar_sdk/3.3.0/poptorch-3.3.0+113432_960e9c294b_ubuntu_20_04-cp38-cp38-linux_x86_64.whl
+Requirement already satisfied: torchaudio@ https://download.pytorch.org/whl/cpu/torchaudio-2.0.2%2Bcpu-cp38-cp38-linux_x86_64.whl from https://download.pytorch.org/whl/cpu/torchaudio-2.0.2%2Bcpu-cp38-cp38-linux_x86_64.whl in ./venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from poptorch==3.3.0+113432-960e9c294b-ubuntu-20-04) (2.0.2+cpu)
+Requirement already satisfied: torchvision@ https://download.pytorch.org/whl/cpu/torchvision-0.15.2%2Bcpu-cp38-cp38-linux_x86_64.whl from https://download.pytorch.org/whl/cpu/torchvision-0.15.2%2Bcpu-cp38-cp38-linux_x86_64.whl in ./venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from poptorch==3.3.0+113432-960e9c294b-ubuntu-20-04) (0.15.2+cpu)
+Requirement already satisfied: torch@ https://download.pytorch.org/whl/cpu/torch-2.0.1%2Bcpu-cp38-cp38-linux_x86_64.whl from https://download.pytorch.org/whl/cpu/torch-2.0.1%2Bcpu-cp38-cp38-linux_x86_64.whl in ./venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from poptorch==3.3.0+113432-960e9c294b-ubuntu-20-04) (2.0.1+cpu)
+Requirement already satisfied: tqdm in ./venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from poptorch==3.3.0+113432-960e9c294b-ubuntu-20-04) (4.66.2)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in ./venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torchvision@ https://download.pytorch.org/whl/cpu/torchvision-0.15.2%2Bcpu-cp38-cp38-linux_x86_64.whl->poptorch==3.3.0+113432-960e9c294b-ubuntu-20-04) (10.3.0)
+Requirement already satisfied: requests in ./venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torchvision@ https://download.pytorch.org/whl/cpu/torchvision-0.15.2%2Bcpu-cp38-cp38-linux_x86_64.whl->poptorch==3.3.0+113432-960e9c294b-ubuntu-20-04) (2.31.0)
+Requirement already satisfied: numpy in ./venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torchvision@ https://download.pytorch.org/whl/cpu/torchvision-0.15.2%2Bcpu-cp38-cp38-linux_x86_64.whl->poptorch==3.3.0+113432-960e9c294b-ubuntu-20-04) (1.24.4)
+Requirement already satisfied: typing-extensions in ./venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torch@ https://download.pytorch.org/whl/cpu/torch-2.0.1%2Bcpu-cp38-cp38-linux_x86_64.whl->poptorch==3.3.0+113432-960e9c294b-ubuntu-20-04) (4.11.0)
+Requirement already satisfied: networkx in ./venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torch@ https://download.pytorch.org/whl/cpu/torch-2.0.1%2Bcpu-cp38-cp38-linux_x86_64.whl->poptorch==3.3.0+113432-960e9c294b-ubuntu-20-04) (3.1)
+Requirement already satisfied: filelock in ./venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torch@ https://download.pytorch.org/whl/cpu/torch-2.0.1%2Bcpu-cp38-cp38-linux_x86_64.whl->poptorch==3.3.0+113432-960e9c294b-ubuntu-20-04) (3.13.3)
+Requirement already satisfied: jinja2 in ./venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torch@ https://download.pytorch.org/whl/cpu/torch-2.0.1%2Bcpu-cp38-cp38-linux_x86_64.whl->poptorch==3.3.0+113432-960e9c294b-ubuntu-20-04) (3.1.3)
+Requirement already satisfied: sympy in ./venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torch@ https://download.pytorch.org/whl/cpu/torch-2.0.1%2Bcpu-cp38-cp38-linux_x86_64.whl->poptorch==3.3.0+113432-960e9c294b-ubuntu-20-04) (1.12)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from requests->torchvision@ https://download.pytorch.org/whl/cpu/torchvision-0.15.2%2Bcpu-cp38-cp38-linux_x86_64.whl->poptorch==3.3.0+113432-960e9c294b-ubuntu-20-04) (2.2.1)
+Requirement already satisfied: idna<4,>=2.5 in ./venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from requests->torchvision@ https://download.pytorch.org/whl/cpu/torchvision-0.15.2%2Bcpu-cp38-cp38-linux_x86_64.whl->poptorch==3.3.0+113432-960e9c294b-ubuntu-20-04) (3.6)
+Requirement already satisfied: certifi>=2017.4.17 in ./venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from requests->torchvision@ https://download.pytorch.org/whl/cpu/torchvision-0.15.2%2Bcpu-cp38-cp38-linux_x86_64.whl->poptorch==3.3.0+113432-960e9c294b-ubuntu-20-04) (2024.2.2)
+Requirement already satisfied: charset-normalizer<4,>=2 in ./venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from requests->torchvision@ https://download.pytorch.org/whl/cpu/torchvision-0.15.2%2Bcpu-cp38-cp38-linux_x86_64.whl->poptorch==3.3.0+113432-960e9c294b-ubuntu-20-04) (3.3.2)
+Requirement already satisfied: MarkupSafe>=2.0 in ./venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from jinja2->torch@ https://download.pytorch.org/whl/cpu/torch-2.0.1%2Bcpu-cp38-cp38-linux_x86_64.whl->poptorch==3.3.0+113432-960e9c294b-ubuntu-20-04) (2.1.5)
+Requirement already satisfied: mpmath>=0.19 in ./venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from sympy->torch@ https://download.pytorch.org/whl/cpu/torch-2.0.1%2Bcpu-cp38-cp38-linux_x86_64.whl->poptorch==3.3.0+113432-960e9c294b-ubuntu-20-04) (1.3.0)
+Installing collected packages: poptorch
+  Attempting uninstall: poptorch
+    Found existing installation: poptorch 3.3.0+113432
+    Uninstalling poptorch-3.3.0+113432:
+      Successfully uninstalled poptorch-3.3.0+113432
+Successfully installed poptorch-3.3.0+113432
+(poptorch33_env) (base) akozlov@gc-poplar-03:~$ mkdir ~/tmp
+mkdir: cannot create directory ‘/home/akozlov/tmp’: File exists
+(poptorch33_env) (base) akozlov@gc-poplar-03:~$ export TF_POPLAR_FLAGS=--executable_cache_path=~/tmp
+(poptorch33_env) (base) akozlov@gc-poplar-03:~$ export POPTORCH_CACHE_DIR=~/tmp
+(poptorch33_env) (base) akozlov@gc-poplar-03:~$
+(poptorch33_env) (base) akozlov@gc-poplar-03:~$ export POPART_LOG_LEVEL=WARN
+(poptorch33_env) (base) akozlov@gc-poplar-03:~$ export POPLAR_LOG_LEVEL=WARN
+(poptorch33_env) (base) akozlov@gc-poplar-03:~$ export POPLIBS_LOG_LEVEL=WARN
+(poptorch33_env) (base) akozlov@gc-poplar-03:~$
+(poptorch33_env) (base) akozlov@gc-poplar-03:~$ export PYTHONPATH=/software/graphcore/poplar_sdk/3.3.0/poplar-ubuntu_20_04-3.3.0+7857-b67b751185/python:$PYTHONPATH
+(poptorch33_env) (base) akozlov@gc-poplar-03:~$ mkdir ~/graphcore
+mkdir: cannot create directory ‘/home/akozlov/graphcore’: File exists
+(poptorch33_env) (base) akozlov@gc-poplar-03:~$ cd ~/graphcore
+(poptorch33_env) (base) akozlov@gc-poplar-03:~/graphcore$ git clone https://github.com/graphcore/examples.git
+fatal: destination path 'examples' already exists and is not an empty directory.
+(poptorch33_env) (base) akozlov@gc-poplar-03:~/graphcore$ cd examples
+(poptorch33_env) (base) akozlov@gc-poplar-03:~/graphcore/examples$ git tag
+v2.1.0
+v2.2.0
+v2.3.0
+v2.4.0
+v2.5.0
+v2.6.0
+v3.0.0
+v3.1.0
+v3.2.0
+v3.3.0
+v3.4.0
+v3.4.1
+(poptorch33_env) (base) akozlov@gc-poplar-03:~/graphcore/examples$ git checkout v3.3.0
+HEAD is now at bf12eaa Updates with Poplar SDK 3.3.0 release
+(poptorch33_env) (base) akozlov@gc-poplar-03:~/graphcore/examples$ cd ~/graphcore/examples/tutorials/simple_applications/pytorch/mnist
+(poptorch33_env) (base) akozlov@gc-poplar-03:~/graphcore/examples/tutorials/simple_applications/pytorch/mnist$ source ~/venvs/graphcore/poptorch33_env/bin/activate
+(poptorch33_env) (base) akozlov@gc-poplar-03:~/graphcore/examples/tutorials/simple_applications/pytorch/mnist$ python -m pip install -r requirements.txt
+Requirement already satisfied: torchvision==0.15.2 in /home/akozlov/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from -r requirements.txt (line 1)) (0.15.2+cpu)
+Collecting tqdm==4.46.1
+  Downloading tqdm-4.46.1-py2.py3-none-any.whl (63 kB)
+     |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 63 kB 2.0 MB/s
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /home/akozlov/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torchvision==0.15.2->-r requirements.txt (line 1)) (10.3.0)
+Requirement already satisfied: numpy in /home/akozlov/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torchvision==0.15.2->-r requirements.txt (line 1)) (1.24.4)
+Requirement already satisfied: torch==2.0.1 in /home/akozlov/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torchvision==0.15.2->-r requirements.txt (line 1)) (2.0.1+cpu)
+Requirement already satisfied: requests in /home/akozlov/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torchvision==0.15.2->-r requirements.txt (line 1)) (2.31.0)
+Requirement already satisfied: filelock in /home/akozlov/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torch==2.0.1->torchvision==0.15.2->-r requirements.txt (line 1)) (3.13.3)
+Requirement already satisfied: networkx in /home/akozlov/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torch==2.0.1->torchvision==0.15.2->-r requirements.txt (line 1)) (3.1)
+Requirement already satisfied: typing-extensions in /home/akozlov/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torch==2.0.1->torchvision==0.15.2->-r requirements.txt (line 1)) (4.11.0)
+Requirement already satisfied: sympy in /home/akozlov/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torch==2.0.1->torchvision==0.15.2->-r requirements.txt (line 1)) (1.12)
+Requirement already satisfied: jinja2 in /home/akozlov/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torch==2.0.1->torchvision==0.15.2->-r requirements.txt (line 1)) (3.1.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/akozlov/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from requests->torchvision==0.15.2->-r requirements.txt (line 1)) (3.3.2)
+Requirement already satisfied: certifi>=2017.4.17 in /home/akozlov/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from requests->torchvision==0.15.2->-r requirements.txt (line 1)) (2024.2.2)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/akozlov/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from requests->torchvision==0.15.2->-r requirements.txt (line 1)) (2.2.1)
+Requirement already satisfied: idna<4,>=2.5 in /home/akozlov/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from requests->torchvision==0.15.2->-r requirements.txt (line 1)) (3.6)
+Requirement already satisfied: mpmath>=0.19 in /home/akozlov/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from sympy->torch==2.0.1->torchvision==0.15.2->-r requirements.txt (line 1)) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/akozlov/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from jinja2->torch==2.0.1->torchvision==0.15.2->-r requirements.txt (line 1)) (2.1.5)
+Installing collected packages: tqdm
+  Attempting uninstall: tqdm
+    Found existing installation: tqdm 4.66.2
+    Uninstalling tqdm-4.66.2:
+      Successfully uninstalled tqdm-4.66.2
+Successfully installed tqdm-4.46.1
+(poptorch33_env) (base) akozlov@gc-poplar-03:~/graphcore/examples/tutorials/simple_applications/pytorch/mnist$ /opt/slurm/bin/srun --ipus=1 python mnist_poptorch.py
+srun: job 20709 queued and waiting for resources
+srun: job 20709 has been allocated resources
+100%|¦¦¦¦¦¦¦¦¦¦| 9912422/9912422 [00:00<00:00, 376424514.88it/s]
+100%|¦¦¦¦¦¦¦¦¦¦| 28881/28881 [00:00<00:00, 190464927.40it/s]
+100%|¦¦¦¦¦¦¦¦¦¦| 1648877/1648877 [00:00<00:00, 161854744.94it/s]
+100%|¦¦¦¦¦¦¦¦¦¦| 4542/4542 [00:00<00:00, 26945585.24it/s]
+Epochs:   0%|          | 0/10 [00:00<?,[10:45:50.587] [poptorch:cpp] [warning] [DISPATCHER] Type coerced from Long to Int for tensor id 10
+  0%|          | 0/150 [00:00<?, ?it/s]                2024-04-08T10:45:51.069815Z PL:POPLIN    855012.855012 W: poplin::preplanConvolution() is deprecated! Use poplin::preplan() instead
+Graph compilation:   3%|?         | 3/100 [00:00<00:03]2024-04-08T10:45:54.535642Z PL:POPLIN    855012.855012 W: poplin::preplanMatMuls() is deprecated! Use poplin::preplan() instead
+Graph compilation: 100%|¦¦¦¦¦¦¦¦¦¦| 100/100 [00:21<00:00]2024-04-08T10:46:13.507097Z popart:session 855012.855012 W: Rng state buffer was not serialized.You did not load poplar Engine.Remember that if you would like to run the model using the model runtime then you have to create your own buffer and callback in your model runtime application for rngStateTensor.
+Graph compilation:  97%|¦¦¦¦¦¦¦¦¦?| 97/100 [00:21<00:03]
+Epochs: 100%|¦¦¦¦¦¦¦¦¦¦| 10/10 [01:51<00:00, 11.11s/it]
+  0%|          | 0/125 [00:00<?, ?it/s]                2024-04-08T10:47:42.022706Z PL:POPLIN    855012.855012 W: poplin::preplanConvolution() is deprecated! Use poplin::preplan() insteadph compilation:   4%|?         | 4/100 [00:00<00:03]
+                                                       2024-04-08T10:47:44.288690Z PL:POPLIN    855012.855012 W: poplin::preplanMatMuls() is deprecated! Use poplin::preplan() instead
+Graph compilation: 100%|¦¦¦¦¦¦¦¦¦¦| 100/100 [00:14<00:00]
+ 89%|¦¦¦¦¦¦¦¦? Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
+Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz to /home/akozlov/.torch/datasets/MNIST/raw/train-images-idx3-ubyte.gz
+Extracting /home/akozlov/.torch/datasets/MNIST/raw/train-images-idx3-ubyte.gz to /home/akozlov/.torch/datasets/MNIST/raw
+
+Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
+Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz to /home/akozlov/.torch/datasets/MNIST/raw/train-labels-idx1-ubyte.gz
+Extracting /home/akozlov/.torch/datasets/MNIST/raw/train-labels-idx1-ubyte.gz to /home/akozlov/.torch/datasets/MNIST/raw
+
+Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
+Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz to /home/akozlov/.torch/datasets/MNIST/raw/t10k-images-idx3-ubyte.gz
+Extracting /home/akozlov/.torch/datasets/MNIST/raw/t10k-images-idx3-ubyte.gz to /home/akozlov/.torch/datasets/MNIST/raw
+
+Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
+Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz to /home/akozlov/.torch/datasets/MNIST/raw/t10k-labels-idx1-ubyte.gz
+Extracting /home/akozlov/.torch/datasets/MNIST/raw/t10k-labels-idx1-ubyte.gz to /home/akozlov/.torch/datasets/MNIST/raw
+
+TrainingModelWithLoss(
+  (model): Network(
+    (layer1): Block(
+      (conv): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1))
+      (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (relu): ReLU()
+    )
+    (layer2): Block(
+      (conv): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1))
+      (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (relu): ReLU()
+    )
+    (layer3): Linear(in_features=1600, out_features=128, bias=True)
+    (layer3_act): ReLU()
+    (layer3_dropout): Dropout(p=0.5, inplace=False)
+    (layer4): Linear(in_features=128, out_features=10, bias=True)
+    (softmax): Softmax(dim=1)
+  )
+  (loss): CrossEntropyLoss()
+)
+Accuracy on test set: 98.58%
+(poptorch33_env) (base) akozlov@gc-poplar-03:~/graphcore/examples/tutorials/simple_applications/pytorch/mnist$ /opt/slurm/bin/srun --ipus=1 python mnist_poptorch.py
+srun: job 20720 queued and waiting for resources
+srun: job 20720 has been allocated resources
+Epochs:   0%|          | 0/10 [00:00<?,[11:41:48.396] [poptorch:cpp] [warning] [DISPATCHER] Type coerced from Long to Int for tensor id 10
+Graph compilation: 100%|¦¦¦¦¦¦¦¦¦¦| 100/100 [00:00<00:00]
+Epochs: 100%|¦¦¦¦¦¦¦¦¦¦| 10/10 [01:26<00:00,  8.69s/it]
+Graph compilation: 100%|¦¦¦¦¦¦¦¦¦¦| 100/100 [00:00<00:00]
+ 84%|¦¦¦¦¦¦¦¦? | 105/125 [00:03<00:0TrainingModelWithLoss(
+  (model): Network(
+    (layer1): Block(
+      (conv): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1))
+      (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (relu): ReLU()
+    )
+    (layer2): Block(
+      (conv): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1))
+      (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (relu): ReLU()
+    )
+    (layer3): Linear(in_features=1600, out_features=128, bias=True)
+    (layer3_act): ReLU()
+    (layer3_dropout): Dropout(p=0.5, inplace=False)
+    (layer4): Linear(in_features=128, out_features=10, bias=True)
+    (softmax): Softmax(dim=1)
+  )
+  (loss): CrossEntropyLoss()
+)
+Accuracy on test set: 98.44%
+(poptorch33_env) (base) akozlov@gc-poplar-03:~/graphcore/examples/tutorials/simple_applications/pytorch/mnist$ /opt/slurm/bin/srun --ipus=1 python mnist_poptorch.py
+srun: job 20721 queued and waiting for resources
+srun: job 20721 has been allocated resources
+Epochs:   0%|          | 0/10 [00:00<?,[11:44:48.471] [poptorch:cpp] [warning] [DISPATCHER] Type coerced from Long to Int for tensor id 10
+Graph compilation: 100%|¦¦¦¦¦¦¦¦¦¦| 100/100 [00:00<00:00]
+Epochs: 100%|¦¦¦¦¦¦¦¦¦¦| 10/10 [01:26<00:00,  8.60s/it]
+Graph compilation: 100%|¦¦¦¦¦¦¦¦¦¦| 100/100 [00:00<00:00]
+               TrainingModelWithLoss(, 47.09it/s]0<00:00]
+  (model): Network(
+    (layer1): Block(
+      (conv): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1))
+      (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (relu): ReLU()
+    )
+    (layer2): Block(
+      (conv): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1))
+      (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (relu): ReLU()
+    )
+    (layer3): Linear(in_features=1600, out_features=128, bias=True)
+    (layer3_act): ReLU()
+    (layer3_dropout): Dropout(p=0.5, inplace=False)
+    (layer4): Linear(in_features=128, out_features=10, bias=True)
+    (softmax): Softmax(dim=1)
+  )
+  (loss): CrossEntropyLoss()
+)
+Accuracy on test set: 93.08%
+(poptorch33_env) (base) akozlov@gc-poplar-03:~/graphcore/examples/tutorials/simple_applications/pytorch/mnist$ /opt/slurm/bin/srun --ipus=1 python mnist_poptorch.py
+srun: job 20723 queued and waiting for resources
+srun: job 20723 has been allocated resources
+Epochs:   0%|          | 0/10 [00:00<?,[13:44:19.460] [poptorch:cpp] [warning] [DISPATCHER] Type coerced from Long to Int for tensor id 10
+Graph compilation: 100%|¦¦¦¦¦¦¦¦¦¦| 100/100 [00:00<00:00]
+Epochs: 100%|¦¦¦¦¦¦¦¦¦¦| 10/10 [01:26<00:00,  8.69s/it]
+Graph compilation: 100%|¦¦¦¦¦¦¦¦¦¦| 100/100 [00:00<00:00]
+ 86%|¦¦¦¦¦¦¦¦¦ | 107/125 [00:TrainingModelWithLoss(00:00]
+  (model): Network(
+    (layer1): Block(
+      (conv): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1))
+      (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (relu): ReLU()
+    )
+    (layer2): Block(
+      (conv): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1))
+      (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (relu): ReLU()
+    )
+    (layer3): Linear(in_features=1600, out_features=128, bias=True)
+    (layer3_act): ReLU()
+    (layer3_dropout): Dropout(p=0.5, inplace=False)
+    (layer4): Linear(in_features=128, out_features=10, bias=True)
+    (softmax): Softmax(dim=1)
+  )
+  (loss): CrossEntropyLoss()
+)
+Accuracy on test set: 9.58%
+(poptorch33_env) (base) akozlov@gc-poplar-03:~/graphcore/examples/tutorials/simple_applications/pytorch/mnist$
